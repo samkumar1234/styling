@@ -1,0 +1,104 @@
+<html>
+<head>
+<style>
+body {
+ margin: 0;
+ overflow-x: hidden;
+}
+.nav-open .nav {
+ transform: translateX(0);
+}
+.nav-open .main {
+ transform: translateX(350px);
+}
+.nav {
+ width: 350px;
+ height: 100vh;
+ position: fixed;
+ top: 0;
+ left: 0;
+ background: #333333;
+ transform: translateX(-350px);
+ transition: transform 0.2s;
+ overflow: hidden;
+}
+.nav-close {
+ background: none;
+ display: flex;
+ align-items: center;
+ border: none;
+ padding: 15px 25px;
+ color: #dddddd;
+ margin-left: auto;
+ cursor: pointer;
+}
+.nav-close:hover {
+ background: rgba(255, 255, 255, 0.05);
+}
+.nav-links-container {
+ box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.15);
+}
+.nav__link {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 15px 25px;
+ text-decoration: none;
+ color: #dddddd;
+}
+.nav__text {
+ font-size: 22px;
+ font-family: "Assistant", sans-serif;
+ font-weight: 500;
+}
+.nav__link:hover {
+ background: rgba(255, 255, 255, 0.05);
+}
+.main {
+ transition: transform 0.2s;
+}
+</style>
+<body>
+ <nav class="nav" id="navigationPannel">
+ <button type="button" class="nav-close" onclick="toggleNav()">
+<span class="nav__text"><h3 id="headingLists">CSS OF WEBPAGES<h3> </span>
+ <ion-icon name="close-outline" size="large"> </ion-icon>
+ </button>
+ <ul id="lists">
+ <div class="nav-links-container">
+ <a id="login" href="login.html" class="nav__link">
+ <span class="nav__text">login</span>
+ <ion-icon name="log-in" size="large"></ion-icon>
+ </a>
+ <a id="table" href="table.html" class="nav__link">
+ <span class="nav__text">Table</span>
+ <ion-icon name="grid" size="large"></ion-icon>
+ </a>
+ <a id="image" href="image.html" class="nav__link">
+ <span class="nav__text">image</span>
+ <ion-icon name="location" size="large"></ion-icon>
+ </a>
+ <a id="frames" href="frame.html" class="nav__link">
+ <span class="nav__text">Frames</span>
+ <ion-icon name="desktop" size="large"></ion-icon>
+ </a>
+ </div>
+ </ul>
+ </nav>
+ <main class="main">
+ <button onclick="toggleNav()">Open Navigation</button>
+ </main>
+ <script>
+ function toggleNav() {
+ document.body.classList.toggle("nav-open");
+ }
+ </script>
+ <script type="module" 
+src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+ <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<h1 id="title">
+WEBPAGE STYLING WITH CSS
+</H1>
+<P ID="description">Each icon has its own navigation link it can be moved to different wepages</p>
+</body>
+</html>
